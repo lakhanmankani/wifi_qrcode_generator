@@ -1,0 +1,2 @@
+Pillow>=4.0
+qrcode>=5.0
