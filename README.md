@@ -7,7 +7,7 @@ Dependencies:
 
 Installation:
 ```bash
-$ pip3 install wifi-qrcode-generator
+$ pip install wifi-qrcode-generator
 ```
 
 Usage:
