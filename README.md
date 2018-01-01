@@ -5,6 +5,11 @@ Dependencies:
 * [Pillow](https://pypi.org/project/Pillow/)
 * [qrcode](https://pypi.org/project/qrcode/)
 
+Installation:
+```bash
+$ pip3 install wifi-qrcode-generator
+```
+
 Usage:
 ```bash
 $ wifi-qrcode-generator
