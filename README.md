@@ -20,8 +20,9 @@ Or as a Python API
 ```python
 #!/usr/bin/env python3
 import wifi_qrcode_generator
-
-wifi_qrcode_generator.wifi_qrcode(
-  'Home wifi', False, 'WPA', 'very complicated password'
-)
+ssid = 'Home wifi'
+type = 'WPA'
+password = 'very complicated password'
+img = wifi_qrcode_generator.wifi_qrcode(ssid, False, type , password)
+img.save(ssid+'.png')
 ```
