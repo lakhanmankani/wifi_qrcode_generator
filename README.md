@@ -21,7 +21,7 @@ Or as a Python API
 #!/usr/bin/env python3
 import wifi_qrcode_generator
 
-wifi_qrcode_generator.wifi_qrcode(
+qr_code = wifi_qrcode_generator.wifi_qrcode(
   'Home wifi', False, 'WPA', 'very complicated password'
 )
 
