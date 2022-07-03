@@ -24,4 +24,7 @@ import wifi_qrcode_generator
 wifi_qrcode_generator.wifi_qrcode(
   'Home wifi', False, 'WPA', 'very complicated password'
 )
+
+qr_code.save('Home wifi.png') #save the qr code
+qr_code.show() #view the qrcode you just generated
 ```
