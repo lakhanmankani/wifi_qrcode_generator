@@ -26,6 +26,7 @@ qr_code = wifi_qrcode_generator.generator.wifi_qrcode(
     ssid='Home WiFi', hidden=False, authentication_type='WPA', password='very complicated password'
 )
 qr_code.print_ascii()
+qr_code.save('qr.png')
 ```
 
 ## Dependencies
