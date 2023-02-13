@@ -1,7 +1,8 @@
-"""Generate WiFi QR code
+"""Generate WiFi QR code.
 """
 
 import qrcode
+
 
 AUTHENTICATION_TYPES = ['WPA', 'WEP', 'nopass']
 
@@ -40,7 +41,7 @@ def wifi_qrcode(ssid: str, hidden: bool, authentication_type: str, password: str
     The generated QR code can be scanned to join the network. 
     This function is a wrapper of `wifi_code` that generates a QR from it's output.
 
-    Parameters:
+    Args:
         ssid: Network SSID.
         hidden: Specify if the network is hidden.
         authentication_type: Specify the authentication type. Supported types: 
@@ -48,7 +49,7 @@ def wifi_qrcode(ssid: str, hidden: bool, authentication_type: str, password: str
         password: Network password. If `authetication_type` is `None`, this argument should be set
           to `None`.
         **kwargs: Optional keyword arguments to use with `qrcode.QRCode`. See the arguments for 
-        `qrcode.QRCode`.
+          `qrcode.QRCode`.
 
     Returns:
         A QR code for the given parameters.

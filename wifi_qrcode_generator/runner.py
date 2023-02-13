@@ -1,10 +1,9 @@
-"""
-Command line utility to generate a QR code for your WiFi network to let others quickly connect.
+"""Command line utility to generate a WiFI QR code.
 """
 
+import argparse
 import getpass
 import sys
-import argparse
 
 from wifi_qrcode_generator import generator
 
@@ -29,7 +28,7 @@ parser.add_argument('-P', '--print-ascii',
 def non_interactive(args: argparse.Namespace):
     """Run app in non-interactive mode.
 
-    Arguments:
+    Args:
         args: The parsed arguments.
     """
     if args.output is None and not args.print_ascii:
