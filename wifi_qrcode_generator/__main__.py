@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-""" Command line utility and API to generate a QR code for your WiFi network to let others quickly 
+"""Command line utility and API to generate a QR code for your WiFi network to let others quickly 
 connect.
 """
 

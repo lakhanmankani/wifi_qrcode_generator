@@ -11,7 +11,8 @@ $ pip install wifi-qrcode-generator
 ```bash
 $ wifi-qrcode-generator
 ```
-![CLI interactive mode](images/Home%20WiFi.png)
+![CLI interactive mode](images/CLI%20interactive.png)
+![QR Code](images/Home%20WiFi.png)
 
 ### CLI non-interactive mode
 ```bash

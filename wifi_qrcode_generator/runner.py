@@ -1,5 +1,4 @@
-"""Command line utility to generate a WiFI QR code.
-"""
+"""Command line utility to generate a WiFI QR code."""
 
 import argparse
 import getpass
@@ -44,8 +43,7 @@ def non_interactive(args: argparse.Namespace):
 
 
 def interactive():
-    """Run app in interactive mode.
-    """
+    """Run app in interactive mode."""
     ssid = input('SSID: ')
     if ssid == '':
         print('Input is not valid!')
@@ -97,14 +95,12 @@ def interactive():
 
 
 def version():
-    """Display current version.
-    """
+    """Display current version."""
     print('WiFi QR code generator V1.0.0')
 
 
 def main():
-    """Entry point for app.
-    """
+    """Entry point for app."""
     args = parser.parse_args()
     if args.version:
         version()

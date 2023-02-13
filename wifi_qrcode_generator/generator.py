@@ -1,5 +1,4 @@
-"""Generate WiFi QR code.
-"""
+"""Generate WiFi QR code."""
 
 import qrcode
 
