@@ -101,5 +101,6 @@ ENV/
 .mypy_cache/
 
 *.png
+!images/*.png
 
 .vscode/

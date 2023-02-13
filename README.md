@@ -11,11 +11,13 @@ $ pip install wifi-qrcode-generator
 ```bash
 $ wifi-qrcode-generator
 ```
+![CLI interactive mode](images/Home%20WiFi.png)
 
 ### CLI non-interactive mode
 ```bash
-$ wifi-qrcode-generator -s "Home WiFi" -p 'very complicated password' -a WPA -o qr.png -P
+$ wifi-qrcode-generator -s "Home WiFi" -p "very complicated password" -a WPA -o qr.png -P
 ```
+![CLI non-interactive mode](images/CLI.png)
 
 ### Python API
 ```python
