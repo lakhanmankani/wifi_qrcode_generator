@@ -1,2 +1,1 @@
-Pillow>=4.0
-qrcode>=5.0
+qrcode[pil]>=5.0
