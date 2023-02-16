@@ -3,9 +3,11 @@
 import qrcode
 
 
-AUTHENTICATION_TYPES = ['WPA', 'WEP', 'nopass']
+AUTHENTICATION_TYPES = ('WPA', 'WEP', 'nopass')
 
-def wifi_code(ssid: str, hidden: str, authentication_type: str, password: str | None = None) -> str:
+
+def wifi_code(ssid: str, hidden: bool, authentication_type: str,
+              password: str | None = None) -> str:
     """Generate a WiFi code for the given parameters. 
 
     The generated WiFi code can be rendered into a QR code to be scanned to join the network.

@@ -41,8 +41,6 @@ setuptools.setup(
 
     keywords=['WiFi', 'qrcode'],
 
-    py_modules=['wifi_qrcode_generator'],
-
     install_requires=['Pillow', 'qrcode'],
 
     packages=['wifi_qrcode_generator'],

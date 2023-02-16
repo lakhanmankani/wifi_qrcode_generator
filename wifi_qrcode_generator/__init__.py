@@ -3,6 +3,7 @@ connect.
 """
 
 from wifi_qrcode_generator import runner
+from wifi_qrcode_generator.generator import *
 
 
 if __name__ == '__main__':

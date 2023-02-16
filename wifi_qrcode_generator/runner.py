@@ -4,7 +4,7 @@ import argparse
 import getpass
 import sys
 
-from wifi_qrcode_generator import generator
+from wifi_qrcode_generator import generator, __version__
 
 
 parser = argparse.ArgumentParser()
@@ -49,7 +49,7 @@ def interactive():
         print('Input is not valid!')
         return
 
-    hidden_input = input('Is the network hidden [y/N]: ').lower()
+    hidden_input = input('Is the network hidden [y/N]: ').lower().strip()
     if hidden_input in ['yes', 'y', 'true', 't']:
         hidden = True
     elif hidden_input in ['', 'no', 'n', 'false', 'f']:
@@ -74,10 +74,11 @@ def interactive():
         password = getpass.getpass('Password: ')
         if password == '':
             print('Input is not valid!')
+            return
     qr_code = generator.wifi_qrcode(
         ssid, hidden, auth_type, password)
 
-    save_qr_code = input('Save QR code [Y/n]: ')
+    save_qr_code = input('Save QR code [Y/n]: ').lower().strip()
     if save_qr_code in ['', 'yes', 'y', 'true', 't']:
         qr_code.make_image().save(f'{ssid}.png')
         print(
@@ -86,7 +87,7 @@ def interactive():
         print('Input is not valid!')
         return
 
-    display_qr_code = input('Display QR code [y/N]: ')
+    display_qr_code = input('Display QR code [y/N]: ').lower().strip()
     if display_qr_code in ['yes', 'y', 'true', 't']:
         qr_code.print_ascii()
     elif display_qr_code not in ['', 'no', 'n', 'false', 'f']:
@@ -96,7 +97,7 @@ def interactive():
 
 def version():
     """Display current version."""
-    print('WiFi QR code generator V1.0.0')
+    print(f'WiFi QR code generator V{__version__}')
 
 
 def main():
