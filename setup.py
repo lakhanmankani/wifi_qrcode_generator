@@ -4,10 +4,13 @@ import setuptools
 this_directory = Path(__file__).parent
 long_description = (this_directory / 'README.md').read_text()
 
+version = {}
+exec((this_directory / 'wifi_qrcode_generator' / '__version__.py').read_text(), {}, version)
+
 setuptools.setup(
     name='wifi_qrcode_generator',
 
-    version='1.0.0',
+    version=version['__version__'],
 
     description='Generate a QR code for your WiFi network to let others quickly connect.',
     long_description=long_description,
@@ -35,13 +38,15 @@ setuptools.setup(
         
         'Programming Language :: Python :: 3 :: Only',
         'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
         'Programming Language :: Python :: 3.10',
         'Programming Language :: Python :: 3.11'
     ],
 
     keywords=['WiFi', 'qrcode'],
 
-    install_requires=['Pillow', 'qrcode'],
+    install_requires=['qrcode[pil]'],
 
     packages=['wifi_qrcode_generator'],
 
