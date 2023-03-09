@@ -70,7 +70,9 @@ def interactive():
         print('Input is not valid!')
         return
 
-    if auth_type != 'nopass':
+    if auth_type == 'nopass':
+        password = None
+    else:
         password = getpass.getpass('Password: ')
         if password == '':
             print('Input is not valid!')
@@ -97,7 +99,7 @@ def interactive():
 
 def version():
     """Display current version."""
-    print(f'WiFi QR code generator V{__version__}')
+    print(f'WiFi QR code generator V{__version__.__version__}')
 
 
 def main():
