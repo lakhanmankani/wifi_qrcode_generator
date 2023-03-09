@@ -2,8 +2,10 @@
 connect.
 """
 
-from wifi_qrcode_generator import runner
+from wifi_qrcode_generator import runner, generator
 from wifi_qrcode_generator.generator import *
+
+__all__ = generator.__all__
 
 
 if __name__ == '__main__':
