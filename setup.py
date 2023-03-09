@@ -7,7 +7,7 @@ long_description = (this_directory / 'README.md').read_text()
 setuptools.setup(
     name='wifi_qrcode_generator',
 
-    version='1.0.0',
+    version='1.0.1',
 
     description='Generate a QR code for your WiFi network to let others quickly connect.',
     long_description=long_description,
@@ -35,6 +35,8 @@ setuptools.setup(
         
         'Programming Language :: Python :: 3 :: Only',
         'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
         'Programming Language :: Python :: 3.10',
         'Programming Language :: Python :: 3.11'
     ],
