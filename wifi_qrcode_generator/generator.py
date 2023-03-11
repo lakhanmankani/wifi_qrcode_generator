@@ -2,12 +2,12 @@
 
 import qrcode
 
+__all__ = 'wifi_code', 'wifi_qrcode', 'AUTHENTICATION_TYPES'
 
 AUTHENTICATION_TYPES = ('WPA', 'WEP', 'nopass')
 
 
-def wifi_code(ssid: str, hidden: bool, authentication_type: str,
-              password: str | None = None) -> str:
+def wifi_code(ssid, hidden, authentication_type, password=None) -> str:
     """Generate a WiFi code for the given parameters. 
 
     The generated WiFi code can be rendered into a QR code to be scanned to join the network.
@@ -35,8 +35,7 @@ def wifi_code(ssid: str, hidden: bool, authentication_type: str,
     raise ValueError(f'Unknown authentication_type: {authentication_type}')
 
 
-def wifi_qrcode(ssid: str, hidden: bool, authentication_type: str, password: str | None = None,
-                **kwargs) -> qrcode.QRCode:
+def wifi_qrcode(ssid, hidden, authentication_type, password=None, **kwargs) -> qrcode.QRCode:
     """Generate WiFi QR code for given parameters.
 
     The generated QR code can be scanned to join the network. 
